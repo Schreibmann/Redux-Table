@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    font-family: "roboto";
+    font-size: 16px;
+}
+
+.table {
+    min-width: 1000px;
+    max-width: 1000px;
+    background-color: #f7f7f7;
+    padding: 15px;
+    margin: 33px auto; 
+}
+
+.table__header {
+    position: relative;
+}
+
+.table__title {
+    color: black;
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
+.add-user__caption {
+    position: relative;
+    margin-top: 10px;
+    width: fit-content;
+    border-radius: 20px;
+    padding: 4px 16px 2px 0;
+}
+
+
+/*
+.add-user__caption:hover {
+    background: yellowgreen;
+}
+*/
+
+.caption__label {
+    color: #302e30;
+    font-size: 1.1em;
+    margin-left: 31px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.caption__label:before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0px;
+    width: 24px;
+    height: 24px;
+    background: #302e30;
+    border-radius: 50%;
+}
+
+.caption__label:hover::before {
+    background: #8bc34a;
+}
+
+.plus {
+    width: 16px;
+    position: absolute;
+    top: 6px;
+    left: 4px;
+    cursor: pointer;
+}
+
+.plus path {
+    stroke: black;
+    fill: white;
+}
+
+.add-user__form {
+    margin-top: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.add-user__form--visible {
+    height: 195px;
+}
+
+.add-user__form--hidden {
+    height: 0px;
+}
+
+
+.input-area {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.input-name,
+.input-phone,
+.input-email {
+    display: inline-flex;
+}
+
+.input-label {
+    color: #afafaf;
+    font-size: 13px;
+}
+
+.input-area input {
+    height: 35px;
+    width: 535px;
+    border: solid 1px lightgrey;
+    border-radius: 15px;
+    padding: 0 15px;
+    margin-top: 5px;
+    font-size: 1.3em;
+    color: #757575;
+    font-family: roboto;
+    font-weight: bolder;
+    background: white;
+}
+
+.input-phone {
+    padding-left: 35px;
+}
+
+.input-phone input {
+    width: 360px;
+}
+
+.divider {
+    display: inline-flex;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.submit__button__wrapper {
+    padding-left: 35px;
+    padding-top: 20px;
+    display: table;
+}
+
+.button {
+    outline: none;
+    display: table-cell;
+    vertical-align: bottom;
+    background: #c32630;
+    border-radius: 20px;
+    height: 35px;
+    color: white;
+    width: 125px;
+    font-weight: bold;
+    border: none;
+    font-size: 1em;
+    font-family: "roboto";
+    box-shadow: 3px 0px 13px rgba(0, 0, 0, 0.25), 0 5px 20px rgba(0, 0, 0, 0.22);
+}
+
+.button:active {
+    margin-left: 1px;
+    margin-top: 1px;
+}
+
+.collapse-bar {
+    position: relative;
+    height: 40px;
+    margin-top: 15px;
+    border-bottom: solid 1px #cccccc;
+}
+
+.collapse-arrow {
+    position: absolute;
+    top: 0px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.collapse-arrow--right {
+    right: 10px;
+}
+
+.collapse-arrow--left {
+    left: 0px;
+}
+
+.collapse-arrow:before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 9px;
+    width: 15px;
+    height: 3px;
+    background: #000000;
+}
+
+.collapse-arrow:after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    width: 15px;
+    height: 3px;
+    background: #000000;
+}
+
+.collapse-arrow:before {
+    webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.collapse-arrow:after {
+    webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.userlist {
+    border-collapse: collapse;
+}
+
+.userlist th {
+    border-bottom: solid 3px #bd9ca4;
+    padding: 25px 33px 10px 33px;
+    vertical-align: bottom;
+    font-size: 0.8em;
+    color: #666666;
+}
+
+.edit_icon,
+.delete_icon {
+    padding: 0px;
+}
+
+.fa-fw {
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+.userlist td {
+    text-align: center;
+    font-size: 0.8em;
+    padding: 15px;
+    vertical-align: text-bottom;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    word-wrap: break-word;
+}
+
+.userlist td:first-child,
+td:nth-child(2) {
+    padding: 0px;
+}
+
+.userlist td:nth-child(3), 
+.userlist td:nth-child(4),
+.userlist td:nth-child(5) {
+    width: 150px;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.close:before,
+.close:after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    width: 24px;
+    height: 3px;
+    background: #000000;
+}
+
+.close:before {
+    webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.close:after {
+    webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.close:hover::before,
+.close:hover::after {
+    background: red;
+}
